@@ -5,10 +5,10 @@ app.use(express.json())
 const ctrl = require('./controllers/controller')
 
 
-app.get(`/api/users`)
-app.post(`/api/users`)
-app.put(`/api/users`)
-app.delete(`/api/users`)
+app.get(`/api/users`, ctrl.getUsers)
+app.post(`/api/users`, ctrl.addUser)
+app.put(`/api/users/:id`, ctrl.updateUser)
+app.delete(`/api/users`, ctrl.deleteUser)
 
 
 
